@@ -1,0 +1,44 @@
+Date : 2026-10-01 11:39:01
+Directory : c:\Users\thiago.silva\Desktop\WienerVist-main\WienerVist-main\src\components
+Total : 12 files,  248 codes, 4 comments, 63 blanks, all 315 lines
+
+Languages
++----------------+------------+------------+------------+------------+------------+
+| language       | files      | code       | comment    | blank      | total      |
++----------------+------------+------------+------------+------------+------------+
+| TypeScript JSX |          6 |        245 |          4 |         60 |        309 |
+| PostCSS        |          6 |          3 |          0 |          3 |          6 |
++----------------+------------+------------+------------+------------+------------+
+
+Directories
++---------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                    | files      | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                       |         12 |        248 |          4 |         63 |        315 |
+| Cards                                                                                                   |          2 |         18 |          0 |          7 |         25 |
+| LastVistorias                                                                                           |          2 |         23 |          0 |          7 |         30 |
+| UI                                                                                                      |          6 |        171 |          4 |         42 |        217 |
+| UI\Checklist                                                                                            |          2 |         92 |          0 |         21 |        113 |
+| UI\Identificacao                                                                                        |          2 |         57 |          4 |         11 |         72 |
+| UI\InfoVistorias                                                                                        |          2 |         22 |          0 |         10 |         32 |
+| header                                                                                                  |          2 |         36 |          0 |          7 |         43 |
++---------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++---------------------------------------------------------------------------------------------------------+----------------+------------+------------+------------+------------+
+| filename                                                                                                | language       | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------------------------------+----------------+------------+------------+------------+------------+
+| c:\Users\thiago.silva\Desktop\WienerVist-main\WienerVist-main\src\components\Cards\Index.tsx            | TypeScript JSX |         17 |          0 |          7 |         24 |
+| c:\Users\thiago.silva\Desktop\WienerVist-main\WienerVist-main\src\components\Cards\index.css            | PostCSS        |          1 |          0 |          0 |          1 |
+| c:\Users\thiago.silva\Desktop\WienerVist-main\WienerVist-main\src\components\LastVistorias\index.css    | PostCSS        |          1 |          0 |          0 |          1 |
+| c:\Users\thiago.silva\Desktop\WienerVist-main\WienerVist-main\src\components\LastVistorias\index.tsx    | TypeScript JSX |         22 |          0 |          7 |         29 |
+| c:\Users\thiago.silva\Desktop\WienerVist-main\WienerVist-main\src\components\UI\Checklist\index.css     | PostCSS        |          0 |          0 |          1 |          1 |
+| c:\Users\thiago.silva\Desktop\WienerVist-main\WienerVist-main\src\components\UI\Checklist\index.tsx     | TypeScript JSX |         92 |          0 |         20 |        112 |
+| c:\Users\thiago.silva\Desktop\WienerVist-main\WienerVist-main\src\components\UI\Identificacao\index.css | PostCSS        |          0 |          0 |          1 |          1 |
+| c:\Users\thiago.silva\Desktop\WienerVist-main\WienerVist-main\src\components\UI\Identificacao\index.tsx | TypeScript JSX |         57 |          4 |         10 |         71 |
+| c:\Users\thiago.silva\Desktop\WienerVist-main\WienerVist-main\src\components\UI\InfoVistorias\index.css | PostCSS        |          1 |          0 |          0 |          1 |
+| c:\Users\thiago.silva\Desktop\WienerVist-main\WienerVist-main\src\components\UI\InfoVistorias\index.tsx | TypeScript JSX |         21 |          0 |         10 |         31 |
+| c:\Users\thiago.silva\Desktop\WienerVist-main\WienerVist-main\src\components\header\index.css           | PostCSS        |          0 |          0 |          1 |          1 |
+| c:\Users\thiago.silva\Desktop\WienerVist-main\WienerVist-main\src\components\header\index.tsx           | TypeScript JSX |         36 |          0 |          6 |         42 |
+| Total                                                                                                   |                |        248 |          4 |         63 |        315 |
++---------------------------------------------------------------------------------------------------------+----------------+------------+------------+------------+------------+
