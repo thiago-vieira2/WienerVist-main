@@ -5,6 +5,7 @@ import Header from './components/header'
 import Identificacao from './components/UI/Identificacao'
 import Home from './pages/home'
 import NovaVistoria from './pages/NovaVistoria'
+import Rotas from './Routes'
 
 function App() {
    
@@ -12,7 +13,11 @@ function App() {
        <div className='flex flex-col gap-5'>
           
             <Header/>
-            <NovaVistoria/>
+
+            <div className='flex justify-center items-center'>
+              <Rotas/>
+            </div>
+           
         </div>
 
 
