@@ -48,6 +48,8 @@ export default function NovaVistoria() {
         setResp({}); // Limpa as respostas ao reiniciar o fluxo
     }
 
+    console.log(resp[0])
+
     return (
         <div className="flex flex-col items-center justify-center gap-5">
             <div></div>
@@ -86,7 +88,7 @@ export default function NovaVistoria() {
                         Modelo={modelo}
                         Patrimonio={patrimonio}
                         Inicio={Inicio}
-                      
+                        Resp={resp}
                     />
                 )}
             </div>

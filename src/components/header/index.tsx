@@ -1,13 +1,14 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Header() {
     const [paginaAtiva, setPaginaAtiva] = useState("inicio");
     const botoes = [
-        { id: "Inicio", none: "Inicio" },
-        { id: "Nova", none: "Nova vistoria" },
-        { id: "Historico", none: "Histórico" },
-        { id: "Profile", none: "Perfil" },
-        { id: "Sair", none: "Sair" }
+        { id: "Inicio", none: "Inicio", to:"/home" },
+        { id: "Nova", none: "Nova vistoria", to:"/NovaVistoria" },
+        { id: "Historico", none: "Histórico", to:"/home" },
+        { id: "Profile", none: "Perfil", to:"/home" },
+        { id: "Sair", none: "Sair", to:"/" }
     ]
 
 
@@ -21,9 +22,10 @@ export default function Header() {
 
                 <div className="flex gap-12">
                     {botoes.map((b) => (
-                        <button
+                        <Link
                             key={b.id}
                             onClick={() => setPaginaAtiva(b.id)}
+                            to={b.to}
                             className={
                                 paginaAtiva === b.id
                                     ? "text-[#FF5B78] border-b-2 border-[#FF5B78]  "
@@ -31,7 +33,7 @@ export default function Header() {
                             }
                         >
                             {b.none}
-                        </button>
+                        </Link>
                     ))}
                 </div>
 

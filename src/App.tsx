@@ -11,12 +11,9 @@ function App() {
    
   return (
        <div className='flex flex-col gap-5'>
-          
-            <Header/>
 
-            <div className='flex justify-center items-center'>
               <Rotas/>
-            </div>
+            
            
         </div>
 

@@ -1,7 +1,25 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import "./index.css"
+import { useState } from "react"
 
 export default function Login() {
+
+    const [senha, setSenha] = useState("")
+    const [user, setUser] = useState("")
+    const [erro, setErro] = useState('');
+    const navigate = useNavigate()
+    function Submit(e: any) {
+        e.preventDefault()
+        if (!user.trim() && !senha.trim()) {
+            setErro('O campo não pode ficar vazio!');
+            return; // O 'return' impede que o código de navegação abaixo rode
+
+        }
+
+        setErro("")
+        navigate('/home')
+    }
+
     return (
         <div className="bg-[#1D1D21] border border-gray-800 rounded-2xl w-105 min-h-130 flex flex-col justify-center items-center">
 
@@ -38,21 +56,23 @@ export default function Login() {
                         id="text"
                         type="text"
                         placeholder="Digite seu e-mail ou usuário"
-                        className="
+                        value={user}
+                        onChange={(e) => setUser(e.target.value)}
+                        className={`
                             w-full
                             h-10
 
                             bg-[#1D1D21]
-                            border border-gray-800
+                            border
+                            ${erro && !user.trim() ? "border-red-500 focus:border-red-500" : "border-gray-800 focus:border-[#FF5B78]"}
                             rounded-md
-                  
+                            pl-5!
                             text-white
                             placeholder:text-gray-600
-                            placeholder:pl-3
-                            focus:border-[#FF5B78]
+                           
                             focus:outline-none
                             transition 
-                        "
+                        `}
                     />
                 </div>
 
@@ -69,22 +89,24 @@ export default function Login() {
                         id="password"
                         type="password"
                         placeholder="Digite sua senha"
-                        className="
+                        value={senha}
+                        onChange={(e) => setSenha(e.target.value)}
+                        className={`
                             w-full
                             h-10
-                           
+                            pl-5!
                             bg-[#1D1D21]
-                            border border-gray-800
+                            border
+                            ${erro && !senha.trim() ? "border-red-500 focus:border-red-500" : "border-gray-800 focus:border-[#FF5B78]"}
                             rounded-md
                            
                             
                              text-white
                             placeholder:text-gray-600
-                            placeholder:pl-3
-                            focus:border-[#FF5B78]
+                         
                             focus:outline-none
                             transition
-                        "
+                        `}
                     />
 
                     <div className="flex justify-end">
@@ -97,9 +119,8 @@ export default function Login() {
                     </div>
                 </div>
 
-                {/* Entrar */}
-                <Link
-                    to="/home"
+                <button
+                    onClick={Submit}
                     className="
                                 flex items-center justify-center
                                 w-full
@@ -114,11 +135,11 @@ export default function Login() {
                             "
                 >
                     Entrar
-                </Link>
+                </button>
 
             </div>
 
-            {/* Cadastro */}
+            
             <p className="text-gray-400 text-sm text-center mt-7">
                 Não tem conta?{" "}
                 <button
