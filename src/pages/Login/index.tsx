@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import "./index.css"
 
 export default function Login() {
@@ -97,23 +98,23 @@ export default function Login() {
                 </div>
 
                 {/* Entrar */}
-                <button
-                    type="button"
+                <Link
+                    to="/home"
                     className="
-                        w-full
-                        h-10
-                       
-                        bg-[#FF5B78]
-                        hover:bg-[#ff4667]
-                        rounded-md
-                        text-white
-                        font-medium
-                        transition
-                        cursor-pointer
-                    "
+                                flex items-center justify-center
+                                w-full
+                                h-10
+                                bg-[#FF5B78]
+                                hover:bg-[#ff4667]
+                                rounded-md
+                                text-white
+                                font-medium
+                                transition
+                                cursor-pointer
+                            "
                 >
                     Entrar
-                </button>
+                </Link>
 
             </div>
 

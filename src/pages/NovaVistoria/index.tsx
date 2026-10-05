@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import Identificacao from "../../components/UI/Identificacao";
-
-import Checklist from "../../components/UI/Checklist";
+import Checklist, { type RespostasChecklist } from "../../components/UI/Checklist";
 import VistoriaConcluida from "../../components/UI/VistoriaConcluida";
 
 export default function NovaVistoria() {
@@ -10,7 +9,9 @@ export default function NovaVistoria() {
     const [os, setOs] = useState("");
     const [etapa, setEtapa] = useState(1);
     const [titulo, setTitulo] = useState("Identificando equipamento");
-    const [resp, setResp] = useState<string[]>([])
+
+    // Guardamos um objeto { [idPergunta]: "SIM" | "NÃO" | "N.A" }
+    const [resp, setResp] = useState<RespostasChecklist>({});
 
     useEffect(() => {
         if (etapa === 1) {
@@ -22,9 +23,12 @@ export default function NovaVistoria() {
         }
     }, [etapa]);
 
-    function AdicionarArray(NewResp: string) {
-        setResp((arr) => [...arr, NewResp ])
-        alert(resp)
+    // Função para adicionar/atualizar a resposta individual de cada pergunta
+    function AdicionarArray(perguntaId: number, NewResp: string) {
+        setResp((prevResp: any) => ({
+            ...prevResp,
+            [perguntaId]: NewResp,
+        }));
     }
 
     function EtapaAtual() {
@@ -40,7 +44,8 @@ export default function NovaVistoria() {
     }
 
     function Inicio() {
-        setEtapa(1)
+        setEtapa(1);
+        setResp({}); // Limpa as respostas ao reiniciar o fluxo
     }
 
     return (
@@ -75,12 +80,15 @@ export default function NovaVistoria() {
                         AddResp={AdicionarArray}
                     />
                 )}
-                {etapa === 3 && <VistoriaConcluida
-                    OS={os}
-                    Modelo={modelo}
-                    Patrimonio={patrimonio} 
-                    Inicio={Inicio}
-                />}
+                {etapa === 3 && (
+                    <VistoriaConcluida
+                        OS={os}
+                        Modelo={modelo}
+                        Patrimonio={patrimonio}
+                        Inicio={Inicio}
+                      
+                    />
+                )}
             </div>
         </div>
     );

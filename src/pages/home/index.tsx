@@ -1,11 +1,12 @@
 import { useState } from "react"
 import Cards from "../../components/Cards/Index"
 import LastVistorias from "../../components/LastVistorias"
+import { Link } from 'react-router-dom';
 
 export default function Home() {
 
 
-    
+
     const CardsVistoria = [
         { Text: "Vistorias realizadas", Qtd: 43 },
         { Text: "Vistorias recentes", Qtd: 3 },
@@ -24,14 +25,19 @@ export default function Home() {
                 <div className="flex flex-col gap-3 ">
                     <h1 className="font-bold text-white text-xl">Nova vistória</h1>
                     <p className="text-white">Realize uma nova Inspeção de equipamento</p>
-                    <button className=" text-white bg-[#FF5B78] hover:bg-[#ff4667] w-190 h-15 rounded-md text-whitefont-medium transition cursor-pointer ">Iniciar vistória</button>
+                    <Link
+                        to="/NovaVistoria"
+                        className="flex items-center justify-center text-white bg-[#FF5B78] hover:bg-[#ff4667] w-190 h-15 rounded-md font-medium transition cursor-pointer"
+                    >
+                        Iniciar vistória
+                    </Link>               
                 </div>
             </div>
 
             <main className=" ">
                 <div className='flex flex-col gap-5'>
 
-      
+
 
                     <div className='flex gap-4 '>
                         {CardsVistoria.map((ativo, index) => (

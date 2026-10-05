@@ -4,6 +4,7 @@ interface PropsInfoVistorias {
     OS: string;
     Patrimonio: string;
     Modelo: string;
+  
     Inicio: () => void;
 }
 
@@ -43,17 +44,32 @@ export default function VistoriaConcluida({ Inicio,OS, Patrimonio, Modelo }: Pro
                 </div>
             </div>
 
-            <div className="flex flex-col items-start  pl-10! pr-10! pt-2! gap-3 bg-[#1D1D21] rounded-2xl border border-gray-800 w-140 h-40">
+            <div className="flex flex-col items-start  pl-10! pr-10! pt-2! gap-3 bg-[#1D1D21] rounded-2xl border border-gray-800 w-140 h-63">
 
                 <h1 className="text-xl text-white font-bold">Resultado do Checklist</h1>
                 <hr className="bg-amber-200 "/>
                 <div className="flex justify-between w-full">
-                    <h2 className="font-bold text-white text">Carenagem</h2>
+                    <h2 className="font-bold text-white text">Quantidade de caixas</h2>
                     <h2 className="bg-[#123324] text-green-200 w-22 h-max flex items-center justify-center px-2 py-0.5 rounded-full text-[13px]  ">Sem avarias</h2>
                 </div>
 
                 <div className="flex justify-between w-full">
-                    <h2 className="font-bold text-white text">Carenagem</h2>
+                    <h2 className="font-bold text-white text">Integridade da embalagem</h2>
+                    <h2 className="bg-[#123324] text-green-200 w-22 h-max flex items-center justify-center px-2 py-0.5 rounded-full text-sm  text-[13px]">Sem avarias</h2>
+                </div>
+
+                 <div className="flex justify-between w-full">
+                    <h2 className="font-bold text-white text">Código e OS conferem</h2>
+                    <h2 className="bg-[#123324] text-green-200 w-22 h-max flex items-center justify-center px-2 py-0.5 rounded-full text-[13px]  ">Sem avarias</h2>
+                </div>
+
+                <div className="flex justify-between w-full">
+                    <h2 className="font-bold text-white text">Integridade estrutural</h2>
+                    <h2 className="bg-[#123324] text-green-200 w-22 h-max flex items-center justify-center px-2 py-0.5 rounded-full text-sm  text-[13px]">Sem avarias</h2>
+                </div>
+
+                 <div className="flex justify-between w-full">
+                    <h2 className="font-bold text-white text">Entrada bloqueada no SAP</h2>
                     <h2 className="bg-[#123324] text-green-200 w-22 h-max flex items-center justify-center px-2 py-0.5 rounded-full text-sm  text-[13px]">Sem avarias</h2>
                 </div>
 
