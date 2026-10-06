@@ -7,7 +7,7 @@ export default function Header() {
         { id: "Inicio", none: "Inicio", to:"/home" },
         { id: "Nova", none: "Nova vistoria", to:"/NovaVistoria" },
         { id: "Historico", none: "Histórico", to:"/home" },
-        { id: "Profile", none: "Perfil", to:"/home" },
+        { id: "Profile", none: "Perfil", to:"/Perfil" },
         { id: "Sair", none: "Sair", to:"/" }
     ]
 

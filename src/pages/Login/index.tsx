@@ -59,7 +59,7 @@ export default function Login() {
                         value={user}
                         onChange={(e) => setUser(e.target.value)}
                         className={`
-                            w-full
+
                             h-10
 
                             bg-[#1D1D21]
