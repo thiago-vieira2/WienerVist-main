@@ -13,7 +13,6 @@ export default function Login() {
         if (!user.trim() && !senha.trim()) {
             setErro('O campo não pode ficar vazio!');
             return; // O 'return' impede que o código de navegação abaixo rode
-
         }
 
         setErro("")
