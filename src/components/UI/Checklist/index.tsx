@@ -25,7 +25,6 @@ export default function Checklist({ AddResp, Voltar, EtapaAtual, Resp, OS, Patri
     const opcoes = ["Sim", "Não", "N/A"];
     const car = ["Sem avarias", "Com avarias"];
 
-    // Estado para armazenar o arquivo da foto da avaria
     const [fotoAvaria, setFotoAvaria] = useState<File | null>(null);
 
     const ID_CARENAGEM = 0;
