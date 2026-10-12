@@ -26,6 +26,8 @@ export default function Identificacao({
         const value = e.target.value;
         if (modelosPermitidos.includes(value)) {
             setModelo(value);
+        } else {
+            setModelo(value); // Permite qualquer entrada para o campo de Modelo
         }
     };
 
@@ -33,6 +35,8 @@ export default function Identificacao({
         const value = e.target.value;
         if (patrimoniosPermitidos.includes(value)) {
             setPatrimonio(value);
+        } else {
+            setPatrimonio(value); // Permite qualquer entrada para o campo de Patrimonio
         }
     };
 
@@ -40,6 +44,8 @@ export default function Identificacao({
         const value = e.target.value;
         if (osPermitidos.includes(value)) {
             setOs(value);
+        } else {
+            setOs(value); // Permite qualquer entrada para o campo de OS
         }
     };
 
