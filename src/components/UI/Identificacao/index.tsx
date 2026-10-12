@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 // 1. Atualizamos a Interface para incluir as funções modificadoras
 interface PropsIdentificacao {
@@ -17,16 +17,38 @@ export default function Identificacao({
     Modelo, setModelo, 
     EtapaAtual
 }: PropsIdentificacao) {
-
-    const [modelos, setModelos] = useState()
-    const permitidos = ["Clia 1000", "CMD 800"]
-
-    function AlterarDominio(e: React.ChangeEvent<HTMLInputElement>) {
-        let value = e.target.value
-        if(modelos.includes == value)
-
-    }
     
+    const modelosPermitidos = ["CMD 800", "CLIA 1000"];
+    const patrimoniosPermitidos = ["1100687", "1100688"];
+    const osPermitidos = ["XRE232545", "XRE232546"];
+
+    const handleModeloChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const value = e.target.value;
+        if (modelosPermitidos.includes(value)) {
+            setModelo(value);
+        } else {
+            setModelo(value); // Permite qualquer entrada para o campo de Modelo
+        }
+    };
+
+    const handlePatrimonioChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const value = e.target.value;
+        if (patrimoniosPermitidos.includes(value)) {
+            setPatrimonio(value);
+        } else {
+            setPatrimonio(value); // Permite qualquer entrada para o campo de Patrimonio
+        }
+    };
+
+    const handleOsChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const value = e.target.value;
+        if (osPermitidos.includes(value)) {
+            setOs(value);
+        } else {
+            setOs(value); // Permite qualquer entrada para o campo de OS
+        }
+    };
+
     return (
         <div className="flex flex-col gap-5 items-center justify-center bg-[#1D1D21] rounded-2xl border border-gray-800 w-140 h-130">
             <div className="flex flex-col gap-3">
@@ -37,8 +59,7 @@ export default function Identificacao({
                     type="text" 
                     list="modelos-equipamento" 
                     value={Modelo}
-                  
-                    onChange={(e) => setModelo(e.target.value)} // Atualiza o pai
+                    onChange={handleModeloChange} // Atualiza o pai
                     placeholder="Selecione ou digite o modelo..."
                     className="w-120 h-13 border border-gray-800 rounded-md placeholder:text-gray-600 pl-5! focus:border-[#FF5B78] text-white focus:outline-none transition " 
                 />
